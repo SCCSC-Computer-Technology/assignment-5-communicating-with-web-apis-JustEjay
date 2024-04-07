@@ -1,0 +1,36 @@
+﻿@model IEnumerable<StudentWebSite.Models.StudentProfile>
+@{
+}
+
+<h1 >Students</h1>
+<div class="d-flex justify-content-end">
+    <a class="btn btn-secondary" asp-controller="Students" asp-action="Add">Add Student</a>
+</div>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>GPA</th>
+            <th>Student Email</th>
+            <th>Major</th>
+            <th>Phone Number</th>
+            <th>Student UserName</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var student in Model)
+        {
+            <tr>
+                <td>@student.Id</td>
+                <td>@student.Name</td>
+                <td>@student.GPA</td>
+                <td>@student.StudentEmail</td>
+                <td>@student.Major</td>
+                <td>@student.PhoneNumber</td>
+                <td>@student.StudentUserName</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
